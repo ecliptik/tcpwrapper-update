@@ -1,0 +1,10 @@
+*.env*
+.git
+*.swp
+fullchain.pem
+privkey.pem
+Dockerfile
+docker-compose*
+README.md
+index.html
+hosts.allow
