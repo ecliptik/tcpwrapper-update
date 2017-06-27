@@ -4,8 +4,6 @@ services:
     build:
       context: .
     stdin_open: true
-    ports:
-      - "9292:9292"
     volumes:
       - ./hosts.allow:/app/hosts.allow
   nginx:
