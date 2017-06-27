@@ -2,5 +2,5 @@ fullchain.pem
 privkey.pem
 .htpasswd
 hosts.allow
-jezebel.conf
-docker-compose-jezebel.yml
+Gemfile.lock
+*jezebel*

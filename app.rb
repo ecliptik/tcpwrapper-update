@@ -1,4 +1,3 @@
-require "httpclient"
 require "sinatra"
 require "erb"
 

@@ -8,5 +8,4 @@ docker-compose*
 README.md
 index.html
 hosts.allow
-jezebel.conf
-docker-compose-jezebel.yml
+*jezebel*
