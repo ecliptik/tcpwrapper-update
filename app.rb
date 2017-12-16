@@ -1,6 +1,9 @@
 require "sinatra"
 require "erb"
 
+#Disable exceptions
+disable :show_exceptions
+
 #Update hosts.allow file using erb template
 def update_file(ip)
   #Template of hosts.allow
