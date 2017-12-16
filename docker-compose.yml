@@ -6,6 +6,7 @@ services:
     stdin_open: true
     volumes:
       - ./hosts.allow:/app/hosts.allow
+    restart: always
   nginx:
     image: nginx:1.13-alpine
     ports:
@@ -15,3 +16,4 @@ services:
     stdin_open: true
     links:
       - tcpwrapper
+    restart: always
