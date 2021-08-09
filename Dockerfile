@@ -1,23 +1,18 @@
-FROM ruby:2.4-alpine
-MAINTAINER Micheal Waltz <ecliptik@gmail.com>
+FROM ruby:3-slim
+LABEL maintainer="Micheal Waltz <docker@ecliptik.com>"
 
 #Copy Gemfile for gem install
 WORKDIR /app
 COPY Gemfile /app
 
 #Intall packages
-RUN apk --no-cache add \
-        --virtual build-dependencies \
-        build-base \
+RUN apt-get update && apt-get install -y \
+        ca-certificates \
         libffi-dev \
         libxml2-dev \
         libxslt-dev \
-        ruby-dev \
-        zlib-dev && \
-    apk --no-cache add \
-        ca-certificates && \
-    bundle install && \
-    apk del build-dependencies
+        zlib1g-dev
+RUN bundle install
 
 #Copy the app after building gems
 COPY . /app
