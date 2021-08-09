@@ -1,4 +1,4 @@
-version: '2'
+version: '3'
 services:
   tcpwrapper:
     build:
@@ -8,7 +8,7 @@ services:
       - ./hosts.allow:/app/hosts.allow
     restart: always
   nginx:
-    image: nginx:1.13-alpine
+    image: public.ecr.aws/nginx/nginx:1.21
     ports:
       - "8080:80"
     volumes:
